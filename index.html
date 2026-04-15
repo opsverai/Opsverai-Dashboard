@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#181C14" />
+    <script>
+      (function () {
+        try {
+          var k = "nexus-settings-theme";
+          var t = localStorage.getItem(k);
+          var root = document.documentElement;
+          if (t === "dark") root.classList.add("dark");
+          else root.classList.remove("dark");
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute("content", t === "dark" ? "#45474B" : "#F5F7F8");
+        } catch (e) {
+          document.documentElement.classList.remove("dark");
+        }
+      })();
+    </script>
+    <title>Opsverai.com – AI Innovation &amp; Idea Development Platform</title>
+    <meta
+      name="description"
+      content="Opsverai.com — AI innovation and idea development platform. Structure ideas, plan business models, validate concepts, and run your innovation pipeline."
+    />
+    <meta name="author" content="Opsverai.com" />
+
+    <meta property="og:title" content="Opsverai.com – AI Innovation &amp; Idea Development Platform" />
+    <meta
+      property="og:description"
+      content="AI innovation and idea development platform — from structured ideas to validation-ready concepts."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <link rel="icon" type="image/svg+xml" href="/Favicon OA.svg" />
+    <link rel="shortcut icon" href="/Favicon OA.svg" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
